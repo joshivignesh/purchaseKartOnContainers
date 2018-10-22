@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  shopkartoncontainers:
+    image: shopkartoncontainers
+    build:
+      context: .
+      dockerfile: shopKartOnContainers\Dockerfile
+
+  catalogapi:
+    image: catalogapi
+    build:
+      context: .
+      dockerfile: ..\CatalogAPI\Dockerfile
+
+
+  basketapi:
+    image: basketapi
+    build:
+      context: .
+      dockerfile: ..\BasketAPI\Dockerfile
+
+
+  orderingapi:
+    image: orderingapi
+    build:
+      context: .
+      dockerfile: OrderingAPI\Dockerfile
+
